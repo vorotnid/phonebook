@@ -1,0 +1,137 @@
+
+body {
+    color: #0f0f0f;
+    background: #fdfcfb;
+    font-weight: normal;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    margin: 10px 0 80px;
+}
+
+.menu {
+    background: #fefefe;
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    padding-right: 80px;
+}
+
+.navbar-brand img {
+    position: relative;
+    top: -40px;
+    padding-left: 66px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #23527c;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.container > a {
+    text-transform: uppercase;
+    color: #23527c;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.form-signin .form-signin-heading {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #5891b7;
+    border-color: #1b4ba4;
+    width: 100%;
+    padding: 10px 16px;
+}
+
+.btn-mine {
+    color: #fff;
+    background-color: #4677bd;
+    border-color: #3177cd;
+    width: 100%;
+    padding: 10px 16px;
+}
+
+.brd{
+    border: 2px solid #ddd;
+}
+
+.form-register-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-group-sm{
+    max-width: 250px;;
+    padding: 15px;
+    margin: 5px auto;
+}
+
+.form-group-sm input{
+    margin: 5px auto;
+}
+
+.form-register {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.form-contact {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.form-contact-header {
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+.btn .btn-lg .btn-block .btn-primary > a {
+    text-color: #fff;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 992px) {
+    .navbar-brand {
+        padding-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .menu {
+        padding: 0;
+    }
+
+    .navbar-brand img {
+        top: -15px;
+        max-height: 50px;
+        padding-left: 60px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+}
