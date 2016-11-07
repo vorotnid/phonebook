@@ -5,6 +5,8 @@ import com.phonebook.exception.PhoneNumberDuplicateException;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.List;
+
 public class ContactServiceTest extends InitServiceContextBase {
 
 
@@ -25,5 +27,31 @@ public class ContactServiceTest extends InitServiceContextBase {
         edited.setFirstName("edited");
         Contact retrieved = contactService.updateContact(edited);
         Assert.assertEquals(edited, retrieved);
+    }
+    @Test
+    public void searchFirstNameTest() {
+        List<Contact> found = contactService.findByRequestedParameters(mockContact1.getFirstName(), "", "", mockUser.getUsername());
+        Assert.assertNotNull(found);
+        Assert.assertTrue(found.size() == 1);
+    }
+
+    @Test
+    public void searchCellNumberNameTest() {
+        List<Contact> found = contactService.findByRequestedParameters("", "", mockContact1.getCellPhoneNumber(), mockUser.getUsername());
+        Assert.assertNotNull(found);
+        Assert.assertTrue(found.size() == 1);
+    }
+
+    @Test
+    public void searchLastNameTest() {
+        List<Contact> found = contactService.findByRequestedParameters("", mockContact1.getLastName(), "", mockUser.getUsername());
+        Assert.assertNotNull(found);
+        Assert.assertTrue(found.size() == 1);
+    }
+
+    @Test
+    public void searchAllNullTest() {
+        List<Contact> found = contactService.findByRequestedParameters("", "", "", mockUser.getUsername());
+        Assert.assertTrue(found.size() == 2);
     }
 }
