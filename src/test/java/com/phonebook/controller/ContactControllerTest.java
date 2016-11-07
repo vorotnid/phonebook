@@ -54,7 +54,7 @@ public class ContactControllerTest {
     @BeforeClass
     public static void domainObjectsInit() {
         user = new User(1L, "username", "password", "first", "last", "middle");
-        contact = null; //new Contact("first", "last", "middle", "+380(66)6666666", "", "", "");
+        contact = new Contact("first", "last", "middle", "+380(66)6666666", "", "", "");
     }
 
     @Test
