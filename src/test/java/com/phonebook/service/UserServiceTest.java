@@ -21,6 +21,5 @@ public class UserServiceTest extends InitServiceContextBase {
     @Test
     public void getByIdTest() {
         Assert.assertEquals(mockUser, userService.findUserById(1L));
-
     }
 }
