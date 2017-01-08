@@ -54,14 +54,14 @@ public class UserControllerTest {
                 .andExpect(view().name("registerPage")).andExpect(model().hasErrors());
     }
     
-    @Test
-    public void UsernameValidation() throws Exception {
-        MockMvc mockMvc = standaloneSetup(controller).build();
+//     @Test
+//     public void UsernameValidation() throws Exception {
+//         MockMvc mockMvc = standaloneSetup(controller).build();
 
-        mockMvc.perform(post("/user/register").param("username", "1aaaaa").param("firstName", "first")
-                .param("lastName", "last").param("middleName", "middle").param("password", "password")).andDo(print())
-                .andExpect(view().name("registerPage")).andExpect(model());
-    }
+//         mockMvc.perform(post("/user/register").param("username", "1aaaaa").param("firstName", "first")
+//                 .param("lastName", "last").param("middleName", "middle").param("password", "password")).andDo(print())
+//                 .andExpect(view().name("registerPage")).andExpect(model());
+//     }
 
     @Test
     public void shouldProcessRegistration() throws Exception {
