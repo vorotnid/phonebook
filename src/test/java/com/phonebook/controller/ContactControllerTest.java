@@ -121,18 +121,18 @@ public class ContactControllerTest {
         verify(userService, atLeastOnce()).findUserByUsername(user.getUsername());
     }
 
-    @Test
-    public void showContactTest() throws Exception {
-        MockMvc mockMvc = standaloneSetup(controller).build();
+//     @Test
+//     public void showContactTest() throws Exception {
+//         MockMvc mockMvc = standaloneSetup(controller).build();
 
-        mockMvc.perform(get("/user/username/contacts/all")
-                .principal(SecurityContextHolder.getContext().getAuthentication()))
-                .andDo(print())
-                .andExpect(view().name("contact"))
-                .andExpect(model().attributeExists("contactList"));
-        verify(userService, atLeastOnce()).findUserByUsername(user.getUsername());
-        verify(contactService, atLeastOnce()).getAllContacts(user.getUsername());
-    }
+//         mockMvc.perform(get("/user/username/contacts/all")
+//                 .principal(SecurityContextHolder.getContext().getAuthentication()))
+//                 .andDo(print())
+//                 .andExpect(view().name("contact"))
+//                 .andExpect(model().attributeExists("contactList"));
+//         verify(userService, atLeastOnce()).findUserByUsername(user.getUsername());
+//         verify(contactService, atLeastOnce()).getAllContacts(user.getUsername());
+//     }
     
     @Test
     public void showAllContactsTest() throws Exception {
